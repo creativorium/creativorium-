@@ -41,6 +41,12 @@ steps:
       - '0'
       - '--max-instances'
       - '1'
+      - '--timeout'
+      - '300'
+      - '--concurrency'
+      - '80'
+      - '--max-instances'
+      - '1'
     id: 'deploy-service'
 
 images:
