@@ -1,0 +1,14 @@
+{
+    "image": {
+        "url": "/img/photo/1.jpg",
+        "alt": "img"
+    },
+    "avatar": {
+        "image": "/img/faces/customers/2.jpg",
+        "alt": "Founder"
+    },
+    "title": "Discover <br/>Our <span class=\"mil-thin\">Collective</span>",
+    "description": "<p>We are a growing collective of independent creatives, designers, and developers based across Bali and Yogyakarta, brought together by a shared passion for turning ideas into meaningful digital experiences. Each of us works independently, yet we come together with purpose of collaborating on projects that demand creativity, care, and craft.</p><p>Diversity is our strength. With different backgrounds, perspectives, and specialisations, we combine our skills to create work that feels thoughtful, human, and impactful. Through close collaboration and a genuine love for what we do, we continuously push ourselves to deliver results we can be proud of, for our clients, and for each other.</p>",
+    "subtitle": "Collaborating with <span class=\"mil-thin\">Passion</span> • Creating with <span class=\"mil-thin\">Purpose</span>"
+}
+  
