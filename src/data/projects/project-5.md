@@ -28,13 +28,13 @@ gallery:
         - image: /img/works/5/2.jpg
           alt: "Lifestyle and hospitality brand portfolio"
 
-        - image: /img/works/5/3.gif
+        - image: /img/works/5/3.jpg
           alt: "Restaurant and dining experience"
 
         - image: /img/works/5/4.jpg
           alt: "Interior and brand atmosphere"
         
-        - image: /img/works/5/5.gif
+        - image: /img/works/5/5.jpg
           alt: "Culinary and lifestyle presentation"
 
         - image: /img/works/5/6.jpg
