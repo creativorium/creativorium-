@@ -46,3 +46,6 @@ PRICING_IMPLEMENTATION.md
 app.yaml
 cloudbuild.yaml
 Dockerfile
+
+# reference files (local only)
+OLD_BLOG_IMAGES_REFERENCE.txt
