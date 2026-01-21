@@ -34,3 +34,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# guide files (local only, not for GitHub)
+CUSTOMIZATION_GUIDE.md
+DEPLOYMENT_GUIDE.md
+DOMAIN_SETUP.md
+EMAIL_SETUP_GUIDE.md
+PRICING_IMPLEMENTATION.md
+
+# deployment configuration files (local only, not for GitHub)
+app.yaml
+cloudbuild.yaml
+Dockerfile

@@ -1,5 +1,6 @@
 ---
 #preview details
+slug: "web-development"
 title: "Website Design and Development"
 preview_title: "Website Design <br>and Development"
 short: "Websites built through close collaboration between independent designers and developers, focused on clarity, usability, and performance."

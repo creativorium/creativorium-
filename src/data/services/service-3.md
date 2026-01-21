@@ -1,5 +1,6 @@
 ---
 #preview details
+slug: "advertising"
 title: "Advertising and Marketing Campaigns"
 preview_title: "Advertising and <br>Marketing Campaigns"
 short: "Campaigns shaped through collaboration between independent creatives, focused on storytelling, experimentation, and real audience connection."

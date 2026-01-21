@@ -1,5 +1,6 @@
 ---
 #preview details
+slug: "digital-consultancy"
 title: "Creative Consulting Concept Development"
 preview_title: "Creative Consulting <br>Concept Development"
 short: "Collaborative creative guidance shaped through shared thinking, exploration, and practical insight."

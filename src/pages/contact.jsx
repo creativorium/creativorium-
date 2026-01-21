@@ -2,10 +2,11 @@ import PageBanner from "@/src/components/PageBanner";
 import Layouts from "@/src/layouts/Layouts";
 import { Formik } from 'formik';
 import AppData from "@data/app.json";
+import { getSortedServicesData } from "@library/services";
 
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 
-const Contact = () => {
+const Contact = ({ services }) => {
   return (
     <Layouts>
         <PageBanner pageTitle={"Get in touch!"} breadTitle={"Contact"} anchorLabel={"Send message"} anchorLink={"#contact"} paddingBottom={1} align={"center"} />
@@ -27,10 +28,10 @@ const Contact = () => {
         {/* contact form */}
         <section id="contact">
             <div className="container mil-p-120-90">
-                <h3 className="mil-center mil-up mil-mb-120">Let's <span className="mil-thin">Talk</span></h3>
+                <h3 className="mil-center mil-up mil-mb-60">Let's <span className="mil-thin">Talk</span></h3>
 
                 <Formik
-                initialValues = {{ email: '', name: '', message: '' }}
+                initialValues = {{ email: '', name: '', message: '', service: '' }}
                 validate = { values => {
                     const errors = {};
                     if (!values.email) {
@@ -49,6 +50,7 @@ const Contact = () => {
 
                     data.append('name', values.name);
                     data.append('email', values.email);
+                    data.append('service', values.service || 'Not specified');
                     data.append('message', values.message);
 
                     fetch(form.action, {
@@ -111,6 +113,36 @@ const Contact = () => {
                         />
                     </div>
                     <div className="col-lg-12 mil-up">
+                        <select
+                            name="service"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.service}
+                            style={{
+                                width: '100%',
+                                padding: '15px 20px',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                                background: 'transparent',
+                                color: 'inherit',
+                                fontSize: '16px',
+                                fontFamily: 'inherit',
+                                borderRadius: '0',
+                                appearance: 'none',
+                                backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%23ffffff\' d=\'M6 9L1 4h10z\'/%3E%3C/svg%3E")',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'right 20px center',
+                                paddingRight: '50px'
+                            }}
+                        >
+                            <option value="">Select a service (optional)</option>
+                            {services.map((service, key) => (
+                                <option key={key} value={service.title}>
+                                    {service.title.replace(/<br\s*\/?>/gi, ' ').replace(/&nbsp;/g, ' ')}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="col-lg-12 mil-up">
                         <textarea 
                             placeholder="Tell us about our project"
                             name="message" 
@@ -141,4 +173,15 @@ const Contact = () => {
     </Layouts>
   );
 };
+
+export async function getStaticProps() {
+  const services = getSortedServicesData();
+
+  return {
+    props: {
+      services: services
+    }
+  }
+}
+
 export default Contact;

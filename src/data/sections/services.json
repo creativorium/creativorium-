@@ -9,23 +9,23 @@
     "items": [
     {
       "title": "Branding & <br>Identity Design",
-      "text": "Collaborative brand identity work shaped by independent designers working together to express your brand’s story, values, and visual direction.",
-      "link": "/services/service-1"
+      "text": "Collaborative brand identity work shaped by independent designers working together to express your brand's story, values, and visual direction.",
+      "link": "/services/branding-identity"
     },
     {
       "title": "Website Design <br>and Development",
       "text": "Web experiences crafted through close collaboration between freelance designers and developers, focused on clarity, usability, and performance.",
-      "link": "/services/service-2"
+      "link": "/services/web-development"
     },
     {
       "title": "Advertising & <br>Marketing Campaigns",
       "text": "Creative campaigns built through shared ideas and experimentation, combining diverse freelance perspectives to connect brands with real audiences.",
-      "link": "/services/service-3"
+      "link": "/services/advertising"
     },
     {
       "title": "Creative Consulting <br>and Development",
       "text": "Thoughtful creative guidance formed through collaborative discussion, helping ideas evolve into practical and meaningful digital solutions.",
-      "link": "/services/service-4"
+      "link": "/services/digital-consultancy"
     }
   ]
 }

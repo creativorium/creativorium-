@@ -1,5 +1,6 @@
 ---
 #preview details
+slug: "branding-identity"
 title: "Branding and Identity Design"
 preview_title: "Branding and <br>Identity Design"
 short: "Brand identities shaped through collaboration between independent creatives, focused on clarity, consistency, and meaningful expression."
