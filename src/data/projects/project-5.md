@@ -7,7 +7,7 @@ category: LIFESTYLE & HOSPITALITY
 date: January 2025
 
 #params
-layout: "five"
+layout: "two"
 
 #full details
 introTitle: LDS <span class="mil-thin">Group</span>

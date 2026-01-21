@@ -40,7 +40,7 @@ demoLink: "https://www.zkdigimax.com/"
 gallery: 
     enabled: 1
     items:
-        - image: /img/works/2/1.gif
+        - image: /img/works/2/1.jpg
           alt: "Digital system overview"
 
         - image: /img/works/2/2.jpg

@@ -1,20 +1,20 @@
 ---
 #preview
-slug: cular-creative
-title: Cular Creative
+slug: shop-jula
+title: Shop Jula
 image: /img/works/6.jpg
-category: CREATIVE & DIGITAL
+category: ECOMMERCE & BRAND
 date: January 2025
 
 #params
-layout: "six"
+layout: "two"
 
 #full details
-introTitle: Cular <span class="mil-thin">Creative</span>
-fullImage: /img/works/6/1.jpg
+introTitle: Shop <span class="mil-thin">Jula</span>
+fullImage: /img/works/jula/cover.jpg
 details:
     - label: "Client:"
-      value: "Cular Creative"
+      value: "Jula"
 
     - label: "Date:"
       value: "January 2025"
@@ -24,38 +24,29 @@ details:
 
 description:
     enabled: 1
-    title: A collaborative creative practice built around clarity and craft
+    title: A lifestyle brand built around craft, culture, and everyday wear
     content: "
-      <p>Cular Creative is a collaborative digital and creative practice working across branding, websites, content, and digital experiences. Rather than operating as a traditional agency, the practice brings together independent creatives to work closely on projects with intention, flexibility, and shared ownership.</p>
-      <p>Each project is shaped through collaboration, practical problem-solving, and a strong focus on clarity — ensuring ideas are translated into outcomes that are both thoughtful and functional. The work balances creative exploration with real-world usability, supporting brands as they grow and evolve.</p>
+      <p>Shop Jula is a Bali-based lifestyle and fashion brand focused on creating comfortable, well-crafted pieces for everyday use. The project involved building a Shopify-based ecommerce platform that reflects the brand’s personality while keeping the shopping experience simple and intuitive.</p>
+      <p>The website was designed to support product storytelling through clean layouts, strong visuals, and flexible content sections. Beyond just selling products, the platform helps communicate Jula’s identity, values, and connection to local culture, making the brand feel personal and approachable.</p>
     "
 
-demoLink: "https://cularcreative.com/"
+demoLink: "https://shopjula.com/"
 
 gallery: 
     enabled: 1
     items:
-        - image: /img/works/6/2.gif
-          alt: "Creative collaboration process"
+        - image: /img/works/6/2.jpg
+          alt: "Shop Jula homepage design"
 
         - image: /img/works/6/3.jpg
-          alt: "Brand and digital design work"
+          alt: "Product listing and collections"
 
-        - image: /img/works/6/4.gif
-          alt: "Website and interactive experience"
+        - image: /img/works/6/4.jpg
+          alt: "Product detail page"
 
         - image: /img/works/6/5.jpg
-          alt: "Visual identity and content creation"
+          alt: "Mobile ecommerce experience"
 
-gallery2: 
-    enabled: 1
-    items:
         - image: /img/works/6/6.jpg
-          alt: "Creative studio output"
-
-        - image: /img/works/6/7.jpg
-          alt: "Digital and brand applications"
-
-        - image: /img/works/6/8.jpg
-          alt: "Collaborative creative outcomes"
+          alt: "Brand visuals and lifestyle photography"
 ---

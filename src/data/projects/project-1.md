@@ -7,7 +7,7 @@ category: HEALTH & FOOD
 date: June 2025
 
 #params
-layout: "one"
+layout: "two"
 
 #full details
 introTitle: "Terra <span class=\"mil-thin\">Eats</span>"

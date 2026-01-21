@@ -7,7 +7,7 @@ category: FILM & MEDIA
 date: September 2025
 
 #params
-layout: "three"
+layout: "two"
 
 #full details
 introTitle: FZ <span class="mil-thin">Film Co</span>

@@ -7,7 +7,7 @@ category: HOSPITALITY
 date: December 2025
 
 #params
-layout: "four"
+layout: "two"
 
 #full details
 introTitle: Homi <span class="mil-thin">Villas</span>
