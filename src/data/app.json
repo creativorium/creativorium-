@@ -2,7 +2,8 @@
     "settings": {
         "siteName": "Creativorium",
         "siteDescription": "A space where designers and developers collaborate to adapt, build, and refine digital projects with intention and care.",
-        "formspreeURL": "https://formspree.io/f/your_api_key",
+        "formspreeURL": "https://formspree.io/f/xqeeyvqq",
+        "formspreeSubscriptionURL": "",
         "mailchimp": {
             "url": "",
             "key": ""

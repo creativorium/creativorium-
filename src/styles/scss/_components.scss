@@ -833,6 +833,7 @@ circle text
         transform: scale(2);
         width: 140px;
         height: 140px;
+        animation: rotate-circle 20s infinite linear;
 
         & text {
             fill: $lt-40;
@@ -840,6 +841,15 @@ circle text
             font-size: 12px;
             font-weight: 500;
             transition: $t-md;
+        }
+    }
+
+    @keyframes rotate-circle {
+        from {
+            transform: scale(2) rotate(0deg);
+        }
+        to {
+            transform: scale(2) rotate(360deg);
         }
     }
 
