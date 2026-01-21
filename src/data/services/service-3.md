@@ -40,4 +40,18 @@ list:
       <p>Our methodology is adaptive and collaborative, shaped by real-world testing rather than rigid frameworks.</p>
       <p>Through iteration, reflection, and continuous refinement, campaigns evolve to stay relevant, responsive, and aligned with both creative intent and audience behaviour.</p>
       "
+
+pricing:
+  title: "Campaign <span class=\"mil-thin\">Investment</span> <br/>for Your <span class=\"mil-thin\">Marketing Goals</span>"
+  description: "Advertising and marketing campaign pricing adapts to your target audience, platform requirements, content volume, and campaign duration. Contact us to discuss your specific campaign needs."
+  items:
+    - title: "Marketing Campaigns"
+      text: "Starting from essential campaign services. Pricing adjusts based on your target audience, platform requirements, content volume, campaign duration, and other factors specific to your marketing goals."
+      price:
+        value: "500"
+        symbol: "$"
+      link: "/contact"
+  button:
+    label: "Plan your campaign"
+    link: "/contact"
 ---

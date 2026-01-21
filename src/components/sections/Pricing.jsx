@@ -1,10 +1,12 @@
 import React from "react";
-import Data from "@data/sections/pricing.json";
+import DefaultData from "@data/sections/pricing.json";
 import Link from "next/link";
 
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 
-const PricingSection = () => {
+const PricingSection = ({ pricingData = null }) => {
+    // Use service-specific pricing if provided, otherwise use default
+    const Data = pricingData || DefaultData;
     
     return (
         <>
@@ -22,7 +24,7 @@ const PricingSection = () => {
                         <div className="row align-items-center">
                             <div className="col-lg-2">
                                 <div className="mil-price-number mil-mb-30">
-                                    <span className="mil-muted mil-thin">{item.price.symbol}</span>
+                                    {item.price.symbol && <span className="mil-muted mil-thin">{item.price.symbol}</span>}
                                     <span className="mil-accent">{item.price.value}</span>
                                 </div>
                             </div>

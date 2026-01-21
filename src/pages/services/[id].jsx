@@ -64,7 +64,7 @@ const ServiceDetail = ( { data, related } ) => {
       </section>
       {/* service end */}
       
-      <PricingSection />
+      {postData.pricing && <PricingSection pricingData={postData.pricing} />}
 
       <RelatedServices services={related} />
       

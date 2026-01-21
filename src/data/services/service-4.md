@@ -40,4 +40,18 @@ list:
       <p>Our methodology is conversational, adaptive, and collaborative. Each engagement is shaped by context, goals, and the people involved.</p>
       <p>Through shared exploration, reflection, and iteration, concepts move from abstract ideas to clear creative directions that can be confidently developed further.</p>
       "
+
+pricing:
+  title: "Consulting <span class=\"mil-thin\">Investment</span> <br/>for Your <span class=\"mil-thin\">Creative Strategy</span>"
+  description: "Consulting engagements are customized based on your needs. Pricing is discussed based on the scope of work, whether you need an overview, detailed strategy, or ongoing guidance."
+  items:
+    - title: "Creative Consulting"
+      text: "Starting from strategy overview and planning sessions. Pricing adjusts based on the scope of your project, whether you need a quick overview, comprehensive strategy, or extended consulting support."
+      price:
+        value: "300"
+        symbol: "$"
+      link: "/contact"
+  button:
+    label: "Schedule a consultation"
+    link: "/contact"
 ---

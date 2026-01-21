@@ -40,4 +40,18 @@ list:
       <p>Our methodology is flexible and shaped by collaboration. Each project evolves through shared planning, iterative building, and practical testing.</p>
       <p>By combining individual expertise with ongoing feedback, we create websites that are resilient, adaptable, and suited to real-world use rather than rigid templates.</p>
       "
+
+pricing:
+  title: "Website <span class=\"mil-thin\">Investment</span> <br/>for Your <span class=\"mil-thin\">Digital Presence</span>"
+  description: "Website pricing is based on complexity, features, and functionality. Starting from essential web solutions, pricing adjusts based on your specific requirements and project scope."
+  items:
+    - title: "Website Development"
+      text: "Starting from essential website solutions. For projects requiring additional features, custom functionality, integrations, or advanced capabilities, pricing will be adjusted based on complexity and your specific needs."
+      price:
+        value: "700"
+        symbol: "$"
+      link: "/contact"
+  button:
+    label: "Explore web solutions"
+    link: "/contact"
 ---

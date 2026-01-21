@@ -41,4 +41,18 @@ list:
         <p>Our methodology is flexible and adaptive, shaped by collaboration rather than rigid frameworks. We combine individual expertise with shared exploration, allowing each project to develop at its own pace.</p>
         <p>Through open communication, iteration, and practical testing, ideas evolve naturally into cohesive solutions. This approach gives space for creativity while maintaining focus on usability, clarity, and real-world application.</p>
       "
+
+pricing:
+  title: "Branding <span class=\"mil-thin\">Investment</span> <br/>for Your <span class=\"mil-thin\">Identity</span>"
+  description: "Our branding services start from essential identity elements. Pricing adjusts based on the complexity and scope of your brand system. Contact us to discuss your specific needs."
+  items:
+    - title: "Branding Services"
+      text: "Starting from essential brand identity elements. For more complex projects requiring additional strategy, research, or multi touchpoint applications, pricing will be adjusted based on your specific requirements."
+      price:
+        value: "500"
+        symbol: "$"
+      link: "/contact"
+  button:
+    label: "Discuss your branding needs"
+    link: "/contact"
 ---
