@@ -1,17 +1,14 @@
 ---
-#preview
 slug: ai-creative-tools
-title: 'AI Tools for Creative Professionals: What's Actually Useful'
-date: '2025-12-03'
+title: "AI Tools for Creative Professionals: What's Actually Useful"
+date: "2025-12-03"
 image: "/img/blog/6.jpg"
 category:
     - Design
 categories:
     - design
-short: A practical look at AI tools that are helping designers, writers, and creators work faster and smarter without replacing human creativity.
-
-#full details
-introTitle: AI Tools for Creative <span class="mil-thin">Professionals</span><br> What's Actually <span class="mil-thin">Useful</span>
+short: "A practical look at AI tools that are helping designers, writers, and creators work faster and smarter without replacing human creativity."
+introTitle: "AI Tools for Creative <span class=\"mil-thin\">Professionals</span><br> What's Actually <span class=\"mil-thin\">Useful</span>"
 
 author:
     name: "Creativorium Team"

@@ -1,17 +1,14 @@
 ---
-#preview
 slug: ai-marketing-2026
-title: 'How AI is Changing Digital Marketing in 2026'
-date: '2025-09-22'
+title: "How AI is Changing Digital Marketing in 2026"
+date: "2025-09-22"
 image: "/img/blog/2.jpg"
 category:
     - Marketing
 categories:
     - marketing
-short: Discover how artificial intelligence is transforming marketing strategies, from personalized content to smarter ad targeting that actually works.
-
-#full details
-introTitle: How AI is Changing <span class="mil-thin">Digital</span><br> <span class="mil-thin">Marketing</span> in 2026
+short: "Discover how artificial intelligence is transforming marketing strategies, from personalized content to smarter ad targeting that actually works."
+introTitle: "How AI is Changing <span class=\"mil-thin\">Digital</span><br> <span class=\"mil-thin\">Marketing</span> in 2026"
 
 author:
     name: "Creativorium Team"

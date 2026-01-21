@@ -1,17 +1,14 @@
 ---
-#preview
 slug: marketing-plan-guide
-title: 'Building a Marketing Plan That Actually Works'
-date: '2025-10-10'
+title: "Building a Marketing Plan That Actually Works"
+date: "2025-10-10"
 image: "/img/blog/3.jpg"
 category:
     - Marketing
 categories:
     - marketing
-short: A practical guide to creating marketing plans that deliver real results, without the jargon and complexity that makes planning feel overwhelming.
-
-#full details
-introTitle: Building a Marketing <span class="mil-thin">Plan</span><br> That Actually <span class="mil-thin">Works</span>
+short: "A practical guide to creating marketing plans that deliver real results, without the jargon and complexity that makes planning feel overwhelming."
+introTitle: "Building a Marketing <span class=\"mil-thin\">Plan</span><br> That Actually <span class=\"mil-thin\">Works</span>"
 
 author:
     name: "Creativorium Team"

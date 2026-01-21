@@ -6,11 +6,20 @@ import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'src/data/posts')
 
+// Helper function to get only markdown files (not directories)
+function getMarkdownFiles() {
+  const fileNames = fs.readdirSync(postsDirectory)
+  return fileNames.filter((fileName) => {
+    const fullPath = path.join(postsDirectory, fileName)
+    return fs.statSync(fullPath).isFile() && fileName.endsWith('.md')
+  })
+}
+
 export function getSortedPostsData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory)
+  const fileNames = getMarkdownFiles()
   
-  const allPostsData = fileNames.filter((fileName) => fileName.includes('.md') && !fileName.startsWith('categories/')).map(fileName => {
+  const allPostsData = fileNames.map(fileName => {
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -40,8 +49,9 @@ export function getSortedPostsData() {
 export function getCategoryPosts(cat_id) {
   // Get file names under /posts
   const allData = [];
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.filter((fileName) => fileName.includes('.md') && !fileName.startsWith('categories/')).map(fileName => {
+  const fileNames = getMarkdownFiles()
+  
+  fileNames.forEach(fileName => {
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -76,8 +86,8 @@ export function getCategoryPosts(cat_id) {
 
 export function getPaginatedPostsData(limit, page) {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.filter((fileName) => fileName.includes('.md') && !fileName.startsWith('categories/')).map(fileName => {
+  const fileNames = getMarkdownFiles()
+  const allPostsData = fileNames.map(fileName => {
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -110,9 +120,10 @@ export function getPaginatedPostsData(limit, page) {
 export function getFeaturedPostsData(ids) {
   
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory)
+  const fileNames = getMarkdownFiles()
   const allData = []
-  fileNames.filter((fileName) => fileName.includes('.md') && !fileName.startsWith('categories/')).forEach(fileName => {
+  
+  fileNames.forEach(fileName => {
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -144,10 +155,10 @@ export function getFeaturedPostsData(ids) {
 
 export function getRelatedPosts(current_id) {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory)
+  const fileNames = getMarkdownFiles()
   const allData = [];
 
-  fileNames.filter((fileName) => fileName.includes('.md') && !fileName.startsWith('categories/')).forEach(fileName => {
+  fileNames.forEach(fileName => {
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -179,8 +190,8 @@ export function getRelatedPosts(current_id) {
 }
 
 export function getAllPostsIds() {
-  const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames.filter((fileName) => fileName.includes('.md') && !fileName.startsWith('categories/')).map(fileName => {
+  const fileNames = getMarkdownFiles()
+  return fileNames.map(fileName => {
     // Read the file to get the slug
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -199,26 +210,32 @@ export function getAllPostsIds() {
 
 export async function getPostData(id) {
   // Find the file by slug (id parameter)
-  const fileNames = fs.readdirSync(postsDirectory)
+  const fileNames = getMarkdownFiles()
   let fileName = null
   
   // First try to find by slug
   for (const file of fileNames) {
-    if (file.includes('.md') && !file.startsWith('categories/')) {
-      const fullPath = path.join(postsDirectory, file)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const matterResult = matter(fileContents)
-      
-      if (matterResult.data.slug === id) {
-        fileName = file
-        break
-      }
+    const fullPath = path.join(postsDirectory, file)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const matterResult = matter(fileContents)
+    
+    if (matterResult.data.slug === id) {
+      fileName = file
+      break
     }
   }
   
   // Fallback to filename if slug not found
   if (!fileName) {
-    fileName = `${id}.md`
+    // Try to find by filename (without .md extension)
+    const potentialFile = `${id}.md`
+    const potentialPath = path.join(postsDirectory, potentialFile)
+    if (fs.existsSync(potentialPath) && fs.statSync(potentialPath).isFile()) {
+      fileName = potentialFile
+    } else {
+      // If still not found, throw an error
+      throw new Error(`Post with id "${id}" not found`)
+    }
   }
   
   const fullPath = path.join(postsDirectory, fileName)

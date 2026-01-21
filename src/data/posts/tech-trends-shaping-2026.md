@@ -1,17 +1,14 @@
 ---
-#preview
 slug: tech-trends-2026
-title: 'Tech Trends Shaping 2026: What Matters for Your Business'
-date: '2025-11-05'
+title: "Tech Trends Shaping 2026: What Matters for Your Business"
+date: "2025-11-05"
 image: "/img/blog/4.jpg"
 category:
     - Technology
 categories:
     - technology
-short: A look at the technology trends that are actually making a difference this year, from AI tools to new ways of working that are changing how businesses operate.
-
-#full details
-introTitle: Tech Trends Shaping <span class="mil-thin">2026</span><br> What Matters for Your <span class="mil-thin">Business</span>
+short: "A look at the technology trends that are actually making a difference this year, from AI tools to new ways of working that are changing how businesses operate."
+introTitle: "Tech Trends Shaping <span class=\"mil-thin\">2026</span><br> What Matters for Your <span class=\"mil-thin\">Business</span>"
 
 author:
     name: "Creativorium Team"

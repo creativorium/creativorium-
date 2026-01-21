@@ -1,17 +1,14 @@
 ---
-#preview
 slug: web-dev-2026
-title: 'The Future of Web Development in 2026: What You Need to Know'
-date: '2025-08-15'
+title: "The Future of Web Development in 2026: What You Need to Know"
+date: "2025-08-15"
 image: "/img/blog/1.jpg"
 category:
     - Technology
 categories:
     - technology
-short: Exploring the latest trends and tools shaping web development this year, from AI integration to new frameworks that are changing how we build websites.
-
-#full details
-introTitle: The Future of Web <span class="mil-thin">Development</span><br> in <span class="mil-thin">2026</span>
+short: "Exploring the latest trends and tools shaping web development this year, from AI integration to new frameworks that are changing how we build websites."
+introTitle: "The Future of Web <span class=\"mil-thin\">Development</span><br> in <span class=\"mil-thin\">2026</span>"
 
 author:
     name: "Creativorium Team"

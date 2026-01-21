@@ -1,17 +1,14 @@
 ---
-#preview
 slug: web-dev-basics
-title: 'Web Development Basics Everyone Should Know in 2026'
-date: '2025-11-18'
+title: "Web Development Basics Everyone Should Know in 2026"
+date: "2025-11-18"
 image: "/img/blog/5.jpg"
 category:
     - Code
 categories:
     - code
-short: Understanding the fundamentals of how websites work, explained in simple terms. Perfect for business owners, marketers, and anyone who works with websites.
-
-#full details
-introTitle: Web Development <span class="mil-thin">Basics</span><br> Everyone Should <span class="mil-thin">Know</span> in 2026
+short: "Understanding the fundamentals of how websites work, explained in simple terms. Perfect for business owners, marketers, and anyone who works with websites."
+introTitle: "Web Development <span class=\"mil-thin\">Basics</span><br> Everyone Should <span class=\"mil-thin\">Know</span> in 2026"
 
 author:
     name: "Creativorium Team"
