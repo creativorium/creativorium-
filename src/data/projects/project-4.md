@@ -1,5 +1,6 @@
 ---
 #preview
+slug: homi-villas
 title: Homi Villas
 image: /img/works/4.jpg
 category: HOSPITALITY

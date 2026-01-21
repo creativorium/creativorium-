@@ -1,5 +1,6 @@
 ---
 #preview
+slug: fz-film-co
 title: FZ Film Co
 image: /img/works/3.jpg
 category: FILM & MEDIA

@@ -1,5 +1,6 @@
 ---
 #preview
+slug: zk-digimax
 title: ZK Digimax
 image: /img/works/2.jpg
 category: TECHNOLOGY

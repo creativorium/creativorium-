@@ -1,5 +1,6 @@
 ---
 #preview
+slug: cular-creative
 title: Cular Creative
 image: /img/works/6.jpg
 category: CREATIVE & DIGITAL

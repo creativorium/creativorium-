@@ -1,5 +1,6 @@
 ---
 #preview
+slug: lds-group
 title: LDS Group
 image: /img/works/5.jpg
 category: LIFESTYLE & HOSPITALITY

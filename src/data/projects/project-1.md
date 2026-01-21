@@ -1,5 +1,6 @@
 ---
 #preview
+slug: terra-eats
 title: Terra Eats
 image: /img/works/1.jpg
 category: HEALTH & FOOD

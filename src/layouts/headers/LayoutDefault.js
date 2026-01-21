@@ -98,12 +98,12 @@ const DefaultHeader = ({ extraClass }) => {
                                       <h6 className="mil-muted mil-mb-30">Projects</h6>
 
                                       <ul className="mil-menu-list">
-                                          <li><Link href="/projects/project-1" className="mil-light-soft">Interior design studio</Link></li>
-                                          <li><Link href="/projects/project-2" className="mil-light-soft">Home Security Camera</Link></li>
-                                          <li><Link href="/projects/project-3" className="mil-light-soft">Kemia Honest Skincare</Link></li>
-                                          <li><Link href="/projects/project-4" className="mil-light-soft">Cascade of Lava</Link></li>
-                                          <li><Link href="/projects/project-5" className="mil-light-soft">Air Pro by Molekule</Link></li>
-                                          <li><Link href="/projects/project-6" className="mil-light-soft">Tony's Chocolonely</Link></li>
+                                          <li><Link href="/projects/terra-eats" className="mil-light-soft">Terra Eats</Link></li>
+                                          <li><Link href="/projects/zk-digimax" className="mil-light-soft">ZK Digimax</Link></li>
+                                          <li><Link href="/projects/fz-film-co" className="mil-light-soft">FZ Film Co</Link></li>
+                                          <li><Link href="/projects/homi-villas" className="mil-light-soft">Homi Villas</Link></li>
+                                          <li><Link href="/projects/lds-group" className="mil-light-soft">LDS Group</Link></li>
+                                          <li><Link href="/projects/cular-creative" className="mil-light-soft">Cular Creative</Link></li>
                                       </ul>
 
                                   </div>
