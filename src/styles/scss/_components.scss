@@ -2642,3 +2642,107 @@ html.is-animating {
         transition-delay: .3s;
     }
 }
+
+/* -------------------------------------------
+
+success modal
+
+------------------------------------------- */
+
+.mil-success-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+.mil-success-modal {
+    background-color: $light;
+    border-radius: 20px;
+    padding: 60px 50px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 576px) {
+        padding: 40px 30px;
+    }
+}
+
+.mil-success-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mil-success-icon {
+    margin-bottom: 10px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.mil-success-title {
+    font-family: $font-1;
+    font-size: $h3;
+    font-weight: 500;
+    color: $dark;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1.2;
+
+    @media screen and (max-width: 576px) {
+        font-size: $h4;
+    }
+}
+
+.mil-success-text {
+    font-family: $font-1;
+    font-size: $text;
+    font-weight: 400;
+    color: $dt-70;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

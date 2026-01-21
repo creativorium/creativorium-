@@ -3,10 +3,13 @@ import Layouts from "@/src/layouts/Layouts";
 import { Formik } from 'formik';
 import AppData from "@data/app.json";
 import { getSortedServicesData } from "@library/services";
+import { useState } from "react";
 
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 
 const Contact = ({ services }) => {
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   return (
     <Layouts>
         <PageBanner pageTitle={"Get in touch!"} breadTitle={"Contact"} anchorLabel={"Send message"} anchorLink={"#contact"} paddingBottom={1} align={"center"} />
@@ -43,9 +46,8 @@ const Contact = ({ services }) => {
                     }
                     return errors;
                 }}
-                onSubmit = {( values, { setSubmitting } ) => {
+                onSubmit = {( values, { setSubmitting, resetForm } ) => {
                     const form = document.getElementById("contactForm");
-                    const status = document.getElementById("contactFormStatus");
                     const data = new FormData();
 
                     data.append('name', values.name);
@@ -61,19 +63,20 @@ const Contact = ({ services }) => {
                         }
                     }).then(response => {
                         if (response.ok) {
-                            status.innerHTML = "Thanks for your submission!";
-                            form.reset()
+                            setShowSuccessModal(true);
+                            setErrorMessage("");
+                            resetForm();
                         } else {
                             response.json().then(data => {
                                 if (Object.hasOwn(data, 'errors')) {
-                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                                    setErrorMessage(data["errors"].map(error => error["message"]).join(", "));
                                 } else {
-                                    status.innerHTML = "Oops! There was a problem submitting your form"
+                                    setErrorMessage("Oops! There was a problem submitting your form");
                                 }
                             })
                         }
                     }).catch(error => {
-                        status.innerHTML = "Oops! There was a problem submitting your form"
+                        setErrorMessage("Oops! There was a problem submitting your form");
                     });
 
                     setSubmitting(false);
@@ -148,13 +151,39 @@ const Contact = ({ services }) => {
                             </button>
                         </div>
                     </div>
-                    <div className="form-status" id="contactFormStatus" />
+                    {errorMessage && (
+                        <div className="col-lg-12">
+                            <p className="mil-up" style={{color: '#f44336', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '2px', marginTop: '10px'}}>{errorMessage}</p>
+                        </div>
+                    )}
                 </form>
                 )}
                 </Formik>
             </div>
         </section>
-        {/* contact form end */}    
+        {/* contact form end */}
+
+        {/* Success Modal */}
+        {showSuccessModal && (
+            <div className="mil-success-modal-overlay" onClick={() => setShowSuccessModal(false)}>
+                <div className="mil-success-modal" onClick={(e) => e.stopPropagation()}>
+                    <div className="mil-success-modal-content">
+                        <div className="mil-success-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="rgba(255, 152, 0, 1)"/>
+                                <path d="M20 30L27 37L40 24" stroke="rgba(0, 0, 0, 1)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 className="mil-success-title">Thanks for your submission!</h3>
+                        <p className="mil-success-text">We'll get back to you soon.</p>
+                        <button className="mil-button mil-arrow-place" onClick={() => setShowSuccessModal(false)}>
+                            <span>Close</span>
+                            <ArrowIcon />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )}
     </Layouts>
   );
 };
