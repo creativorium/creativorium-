@@ -103,7 +103,7 @@ const DefaultHeader = ({ extraClass }) => {
                                           <li><Link href="/projects/fz-film-co" className="mil-light-soft">FZ Film Co</Link></li>
                                           <li><Link href="/projects/homi-villas" className="mil-light-soft">Homi Villas</Link></li>
                                           <li><Link href="/projects/lds-group" className="mil-light-soft">LDS Group</Link></li>
-                                          <li><Link href="/projects/cular-creative" className="mil-light-soft">Cular Creative</Link></li>
+                                          <li><Link href="/projects/shop-jula" className="mil-light-soft">Shop Jula</Link></li>
                                       </ul>
 
                                   </div>
