@@ -18,6 +18,10 @@ gallery:
 
 additional:
     enabled: 0
+
+contentImages:
+    - "/img/blog/tech-trends-2026/content-1.jpg"
+    - "/img/blog/tech-trends-2026/content-2.jpg"
 ---
 
 Technology moves fast, but not every trend matters for your business. Here are the ones that are actually making a difference in 2026.

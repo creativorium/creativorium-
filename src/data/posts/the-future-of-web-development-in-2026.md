@@ -18,6 +18,10 @@ gallery:
 
 additional:
     enabled: 0
+
+contentImages:
+    - "/img/blog/web-dev-2026/content-1.jpg"
+    - "/img/blog/web-dev-2026/content-2.jpg"
 ---
 
 Web development keeps evolving, and 2026 is bringing some exciting changes. If you're building websites or working with developers, here's what's happening right now.

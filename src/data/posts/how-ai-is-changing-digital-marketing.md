@@ -18,6 +18,10 @@ gallery:
 
 additional:
     enabled: 0
+
+contentImages:
+    - "/img/blog/ai-marketing-2026/content-1.jpg"
+    - "/img/blog/ai-marketing-2026/content-2.jpg"
 ---
 
 Marketing has always been about connecting with the right people at the right time. In 2026, AI is making that connection smarter and more personal than ever before.

@@ -18,6 +18,10 @@ gallery:
 
 additional:
     enabled: 0
+
+contentImages:
+    - "/img/blog/ai-creative-tools/content-1.jpg"
+    - "/img/blog/ai-creative-tools/content-2.jpg"
 ---
 
 AI tools are everywhere, but which ones actually help creative professionals? Here's what's working in 2026.

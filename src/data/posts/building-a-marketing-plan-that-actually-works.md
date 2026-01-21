@@ -18,6 +18,10 @@ gallery:
 
 additional:
     enabled: 0
+
+contentImages:
+    - "/img/blog/marketing-plan-guide/content-1.jpg"
+    - "/img/blog/marketing-plan-guide/content-2.jpg"
 ---
 
 Creating a marketing plan doesn't have to be complicated. Here's a straightforward approach that actually helps you reach your goals.

@@ -208,6 +208,50 @@ export function getAllPostsIds() {
   })
 }
 
+// Helper function to insert content images into HTML content
+function insertContentImages(contentHtml, contentImages) {
+  if (!contentImages || contentImages.length === 0) {
+    return contentHtml
+  }
+  
+  // Split content by h2 tags to find insertion points
+  const h2Regex = /(<h2[^>]*>.*?<\/h2>)/g
+  const parts = contentHtml.split(h2Regex)
+  
+  // Insert images after every 2-3 sections (after h2 tags)
+  let imageIndex = 0
+  let sectionCount = 0
+  const result = []
+  
+  for (let i = 0; i < parts.length; i++) {
+    result.push(parts[i])
+    
+    // If this is an h2 tag, increment section count
+    if (parts[i].match(/^<h2[^>]*>/)) {
+      sectionCount++
+      
+      // Insert image after every 2 sections (after 2nd, 4th, etc.)
+      if (sectionCount > 0 && sectionCount % 2 === 0 && imageIndex < contentImages.length) {
+        const image = contentImages[imageIndex]
+        result.push(`<div class="mil-content-image"><img src="${image}" alt="Content image ${imageIndex + 1}" /></div>`)
+        imageIndex++
+      }
+    }
+  }
+  
+  // If we have remaining images and sections, insert them near the end
+  if (imageIndex < contentImages.length && sectionCount > 0) {
+    // Insert remaining images before the last section
+    const lastImageIndex = result.length - 1
+    for (let i = imageIndex; i < contentImages.length; i++) {
+      const image = contentImages[i]
+      result.splice(lastImageIndex, 0, `<div class="mil-content-image"><img src="${image}" alt="Content image ${i + 1}" /></div>`)
+    }
+  }
+  
+  return result.join('')
+}
+
 export async function getPostData(id) {
   // Find the file by slug (id parameter)
   const fileNames = getMarkdownFiles()
@@ -248,7 +292,12 @@ export async function getPostData(id) {
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content)
-  const contentHtml = processedContent.toString()
+  let contentHtml = processedContent.toString()
+
+  // Insert content images if they exist
+  if (matterResult.data.contentImages && Array.isArray(matterResult.data.contentImages)) {
+    contentHtml = insertContentImages(contentHtml, matterResult.data.contentImages)
+  }
 
   // Use slug for id if available, otherwise use the id parameter
   const postId = matterResult.data.slug || id

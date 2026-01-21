@@ -2,9 +2,63 @@ import Link from "next/link";
 import AppData from "@data/app.json";
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 import { useRouter } from 'next/router';
+import { useState } from "react";
 
 const DefaultFooter = ( { extraClass } ) => {
   const { asPath } = useRouter();
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleFooterSubmit = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (!email) {
+      setStatus("Please enter your email address.");
+      return;
+    }
+
+    setStatus("Subscribing...");
+
+    // Use Formspree if available, otherwise fall back to Mailchimp
+    if (AppData.settings.formspreeSubscriptionURL) {
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('_subject', 'New Newsletter Subscription');
+      formData.append('_next', window.location.href); // Prevent redirect
+
+      try {
+        const response = await fetch(AppData.settings.formspreeSubscriptionURL, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          },
+          mode: 'cors'
+        });
+
+        if (response.ok) {
+          setStatus("Thanks for subscribing!");
+          setEmail("");
+        } else {
+          const data = await response.json().catch(() => ({}));
+          if (data.errors) {
+            setStatus(data.errors.map(err => err.message).join(", "));
+          } else {
+            setStatus("Oops! There was a problem. Please try again.");
+          }
+        }
+      } catch (error) {
+        console.error('Subscription error:', error);
+        setStatus("Oops! There was a problem. Please try again.");
+      }
+    } else if (AppData.settings.mailchimp.url) {
+      // Fallback to Mailchimp if Formspree not configured
+      e.target.submit();
+    } else {
+      setStatus("Subscription not configured. Please contact the site administrator.");
+    }
+  };
   
   return (
     <>
@@ -19,13 +73,43 @@ const DefaultFooter = ( { extraClass } ) => {
 
                         <p className="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
-                        <form action={AppData.settings.mailchimp.url} method="post" target="_blank" className="mil-subscribe-form mil-up">
-                            <input type="email" placeholder="Enter our email" name="EMAIL" required />
-                            <input type="hidden" name={AppData.settings.mailchimp.key} />
-                            <button type="submit" className="mil-button mil-icon-button-sm mil-arrow-place">
-                                <ArrowIcon />
-                            </button>
-                        </form>
+                        {AppData.settings.formspreeSubscriptionURL ? (
+                            <form onSubmit={handleFooterSubmit} className="mil-subscribe-form mil-up" noValidate>
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email" 
+                                    name="email" 
+                                    value={email}
+                                    onChange={(e) => {
+                                      setEmail(e.target.value);
+                                      if (status) setStatus(""); // Clear status when typing
+                                    }}
+                                    required 
+                                />
+                                <button type="submit" className="mil-button mil-icon-button-sm mil-arrow-place">
+                                    <ArrowIcon />
+                                </button>
+                                {status && (
+                                  <p style={{
+                                    marginTop: '10px', 
+                                    fontSize: '11px', 
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1px',
+                                    color: status.includes('Thanks') ? '#4CAF50' : status.includes('Subscribing') ? '#FF9800' : '#f44336'
+                                  }}>
+                                    {status}
+                                  </p>
+                                )}
+                            </form>
+                        ) : (
+                            <form action={AppData.settings.mailchimp.url} method="post" target="_blank" className="mil-subscribe-form mil-up">
+                                <input type="email" placeholder="Enter your email" name="EMAIL" required />
+                                <input type="hidden" name={AppData.settings.mailchimp.key} />
+                                <button type="submit" className="mil-button mil-icon-button-sm mil-arrow-place">
+                                    <ArrowIcon />
+                                </button>
+                            </form>
+                        )}
 
                     </div>
                     <div className="col-md-7 col-lg-6">

@@ -18,6 +18,10 @@ gallery:
 
 additional:
     enabled: 0
+
+contentImages:
+    - "/img/blog/web-dev-basics/content-1.jpg"
+    - "/img/blog/web-dev-basics/content-2.jpg"
 ---
 
 You don't need to be a developer to understand how websites work. Here are the basics that help you make better decisions about your web presence.

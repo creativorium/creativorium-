@@ -10,7 +10,7 @@ const PostsDetail = ( props ) => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle={postData.introTitle} breadTitle={postData.title} align={"center"} headingSize={2} />
+      <PageBanner pageTitle={postData.introTitle} breadTitle={postData.title} align={"center"} headingSize={1} />
       
       {/* publication */}
       <section id="blog">
