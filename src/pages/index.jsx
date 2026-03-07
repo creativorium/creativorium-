@@ -20,7 +20,7 @@ const Home1 = (props) => {
   const useHero2 = props.useHero2 === true;
 
   return (
-    <Layouts>
+    <Layouts noFooter={useHero2}>
       {useHero2 ? (
         <HeroTwoSection />
       ) : (
