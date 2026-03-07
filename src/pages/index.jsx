@@ -21,10 +21,16 @@ const Home1 = (props) => {
 
   return (
     <Layouts>
-      {useHero2 ? <HeroTwoSection /> : <HeroOneSection />}
-      <AboutSection />
-      <ServicesSection />
-      <LatestPostsSection posts={props.posts} />
+      {useHero2 ? (
+        <HeroTwoSection />
+      ) : (
+        <>
+          <HeroOneSection />
+          <AboutSection />
+          <ServicesSection />
+          <LatestPostsSection posts={props.posts} />
+        </>
+      )}
     </Layouts>
   );
 };
