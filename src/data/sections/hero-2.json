@@ -18,23 +18,18 @@
         },
         "social": [
             {
-                "icon": "fab fa-behance",
-                "link": "https://behance.com",
-                "title": "behance"
+                "icon": "fas fa-envelope",
+                "link": "mailto:abetnego.kristiawan@gmail.com",
+                "title": "email"
             },
             {
-                "icon": "fab fa-dribbble",
-                "link": "https://dribbble.com",
-                "title": "dribbble"
-            },
-            {
-                "icon": "fab fa-twitter",
-                "link": "https://twitter.com",
-                "title": "twitter"
+                "icon": "fab fa-whatsapp",
+                "link": "https://wa.me/6285156530341",
+                "title": "whatsapp"
             },
             {
                 "icon": "fab fa-github",
-                "link": "https://github.com",
+                "link": "https://github.com/creativorium/",
                 "title": "github"
             }
         ]
